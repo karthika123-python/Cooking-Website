@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Itim&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', 'Itim', 'Italiana', sans-serif;
+            background-color: black;
+        }
+        .hero{
+            background-color: #F5852C;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 30px;
+        }
+        .logo img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #F5852C;
+            object-fit: cover;
+        }
+        .menu-toggle{
+            display: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        nav{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 80px;
+        }
+        nav a{
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .icons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+            font-size: 30px;
+            color: white;
+        }
+        .sign-btn{
+            background-color: black;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        h1{
+            text-align: center;
+            font-size: 44px;
+            color: white;
+            font-weight: bold;
+            margin: 60px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .box1{
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 30px;
+            width: 1000px;
+            background: linear-gradient(90deg, #E6F4FA, #29B6F6);
+        }
+        .box2{
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 30px;
+            width: 1000px;
+            background: linear-gradient(90deg, #8E2DE2, #E0C3FC);
+        }
+        .box3{
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 30px;
+            width: 1000px;
+            background: linear-gradient(90deg, #FFF1E6, #F7B37A);
+        }
+        .box4{
+            border: 2px solid white;
+            border-radius: 12px;
+            padding: 30px;
+            width: 1000px;
+            background: linear-gradient(90deg, #FFD600, #FFF3B0);
+        }
+        .box1 h2, .box2 h2, .box3 h2, .box4 h2{
+            font-size: 32px;
+            font-weight: 600;
+        }
+        .box1 p, .box2 p, .box3 p, .box4 p{
+            font-size: 25px;
+        }
+        .footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+            background-color: #F5852C;
+            font-family: 'Itim', cursive;
+            color: white;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            margin: 20px;
+        }
+        .footer ul{
+            display: flex;
+            gap: 180px;
+        }
+        .footer ul li{
+            list-style-type: none;
+        }
+        .footer h3{
+            font-size: 26px;
+            font-weight: 400;
+        }
+        .footer h4{
+            font-size: 22px;
+            font-weight: 400;
+        }
+        .copyrights{
+            display: flex;
+            gap: 30px;
+            font-size: 20px;
+        }
+        @media (max-width:992px) {
+            body{
+                padding: 20px;
+            }
+            .hero{
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .logo img{
+                width: 150px;
+                height: 150px;
+            }
+            nav a{
+                font-size: 20px;
+            }
+            .icons{
+                flex-wrap: wrap;
+                gap: 40px;
+                justify-content: center;
+            }
+            .sign-btn{
+                padding: 16px 26px;
+                font-size: 18px;
+            }
+            h1{font-size: 35px;margin: 40px;}
+            .box1, .box2, .box3, .box4{
+                width: 900px;
+                padding: 20px;
+            }
+            .box1 h2, .box2 h2, .box3 h2, .box4 h2{
+                font-size: 28px;
+            }
+            .box1 p, .box2 p, .box3 p, .box4 p{
+                font-size: 22px;
+            }
+            .footer{
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            .footer ul{
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 120px;
+            }
+            .footer h3{
+                font-size: 23px;
+            }
+            .footer h4{
+                font-size: 20px;
+            }
+        }
+        @media (max-width:600px) {
+            body{
+                padding: 10px;
+            }
+            .hero{
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            .logo img{
+                width: 180px;
+                height: 180px;
+            }
+            .menu-toggle{
+                display: block;
+                background: black;
+                padding: 10px 14px;
+                border-radius: 8px;
+                order: 2;
+            }
+            .navbar{
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 15px;
+                padding: 20px 0;
+                background-color:  #F5852C;
+                order: 3;
+                text-align: center;
+            } 
+            .navbar.active{
+                display: flex;
+            }  
+            nav a{
+                font-size: 18px;
+            }
+            .icons{
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+            .sign-btn{
+                padding: 14px 24px;
+                font-size: 16px;
+            }
+            h1{font-size: 30px;margin: 30px;}
+            .box1, .box2, .box3, .box4{
+                width: 700px;
+                padding: 15px;
+            }
+            .box1 h2, .box2 h2, .box3 h2, .box4 h2{
+                font-size: 25px;
+            }
+            .box1 p, .box2 p, .box3 p, .box4 p{
+                font-size: 18px;
+            }
+            .footer{
+                flex-direction: column;
+                justify-content: center;
+                gap: 15px;
+            }
+            .footer ul{
+                flex-direction: column;
+                justify-content: center;
+                gap: 40px;
+            }
+            .footer h3{
+                font-size: 20px;
+            }
+            .footer h4{
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="logo">
+            <img src="logo.png" alt="Chef Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="button">
+            <a href="signin.html"><button class="sign-btn">Sign In</button></a>
+        </div>
+    </div>
+    <h1>Blogs</h1>
+    <div class="container">
+        <div class="box1">
+            <h2>Why Everyone Should Learn Cooking at Home</h2>
+            <p>Discover how cooking at home not only saves money but also improves health<br>
+            and brings families together. From basic knife skills to creating gourmet meals,<br>
+            learning to cook is a life-changing skill anyone can master.</p>
+        </div>
+        <div class="box2">
+            <h2>10 Easy Recipes Every Beginner Should Start With</h2>
+            <p>If you're new to the kitchen, start with these simple yet delicious recipes. From<br>
+            fluffy omelets to pasta dishes, these recipes will build your confedence and<br>
+            help you fall in love with cooking.</p>
+        </div>
+        <div class="box3">
+            <h2>The Health Benefits of Cooking Your Own Meals</h2>
+            <p>Cooking at home means full control over ingredients, portions, and nutrition.<br>
+            Learn how home-cooked meals can improve your lifestyle, boost immunity,<br>
+            and even support weight management.</p>
+        </div>
+        <div class="box4">
+            <h2>Exploring World Cuisines From Your Kitchen</h2>
+            <p>Travel the world through flavors! Our cooking classes bring Italian pastas,<br>
+            Indian Curries, Chinese stir-fries, and Mexican tacos to your plate-<br>
+            all from the comfort of your home.</p>
+        </div>
+    </div>
+    <div class="footer">
+        <ul>
+            <li>
+                <div class="logo">
+                    <img src="logo.png" alt="Image">
+                </div>
+            </li>
+            <li>
+                <h3>Quick Links</h3>
+                <h4>Home</h4>
+                <h4>About Us</h4>
+                <h4>Explore Classes</h4>
+                <h4>Pricing</h4>
+                <h4>Testimonials</h4>
+                <h4>Contact</h4>
+            </li>
+            <li>
+                <h3>Support</h3>
+                <h4>FAQ's</h4>
+                <h4>Help Center</h4>
+                <h4>Terms & Conditions</h4>
+                <h4>Privacy Policy</h4>
+            </li>
+            <li>
+                <h3>Get in Touch</h3>
+                <h4>Chennai, Guindy</h4>
+                <h4>91+3894827403</h4>
+                <h4>Nazer003@gmail.com</h4>
+            </li>
+        </ul>
+        <div class="copyrights">
+            <p>Terms & Policy</p>
+            <p>Privacy & Policy</p>
+        </div>
+    </div>
+    <script>
+        const menuToggle=document.querySelector(".menu-toggle");
+        const navbar=document.querySelector(".navbar");
+        menuToggle.addEventListener("click", ()=>{
+            navbar.classList.toggle("active");
+        });
+    </script>
+</body>
+</html>
