@@ -1,0 +1,1024 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&family=Itim&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Poppins', 'Itim', 'Italiana', sans-serif;
+            margin: 0;
+            background-color: black;
+        }
+        .hero{
+            background-color: #F5852C;
+            padding: 20px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 30px;
+        }
+        .logo img{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: #F5852C;
+            object-fit: cover;
+        }
+        .menu-toggle{
+            display: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+        }
+        .navbar{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 80px;
+        }
+        nav a{
+            color: white;
+            font-size: 23px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        .icons{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 80px;
+            font-size: 30px;
+            color: white;
+        }
+        .sign-btn{
+            background-color: black;
+            color: white;
+            padding: 20px 40px;
+            border-radius: 12px;
+            font-size: 20px;
+            font-weight: bold;
+        }
+        .container1{
+            width: 100%;
+            height: 600px;
+            background: url(https://media.istockphoto.com/id/1191905492/photo/chef-preparing-flame-meal-using-pan-in-a-commercial-kitchen.jpg?s=612x612&w=0&k=20&c=kxFQVq-K0yU4mpazKEazlCguvfs3wUQcV6S4auOVX3I=);
+            background-size: cover;
+            background-position: center;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        .row1{
+            display: flex;
+            justify-content: space-evenly;
+            gap: 50px;
+        }
+        h1{
+            font-size: 42px;
+            color: white;
+            font-weight: 400;
+        }
+        .search{
+            position: relative;
+            width: 330px;
+        }
+        .search input{
+            font-family: 'Itim', sans-serif;
+            width: 100%;
+            padding: 0 55px 0 20px;
+            height: 70px;
+            border: none;
+            border-radius: 12px;
+            font-size: 20px;
+        }
+        .search-icon{
+            position: absolute;
+            right: -30px;
+            top: 15%;
+            transform: translateY(-50%);
+            font-size: 22px;
+            color: #333;
+            cursor: pointer;
+        }
+        input::placeholder{
+            font-size: 25px;
+            color: black;
+            font-weight: bold;
+        }
+        p{
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+        }
+        .row2{
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+        }
+        .browse-btn{
+            border: none;
+            background-color: #F5852a;
+            font-size: 28px;
+            color: white;
+            font-weight: bold;
+            padding: 25px 50px;
+            border-radius: 12px;
+        }
+        .container2{
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            justify-content: space-evenly;
+        }
+        .cards1{
+            text-align: center;
+            font-family: 'Itim', sans-serif;
+            margin: 40px;
+        }
+        .cards1 img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        h2{
+            font-size: 25px;
+            color: white;
+            font-weight: bold;
+        }
+        .container3{
+            display: flex;
+            justify-content: center;
+            margin: 50px;
+        }
+        .container3 > h2{
+            font-size: 30px;
+            color: white;
+            font-weight: 600;
+            font-family: 'Itim', sans-serif;
+        }
+        .red{
+            color: darkred;
+            font-size: 32px;
+        }
+        .container4{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+        .cards2 img{
+            object-fit: cover;
+            border-top-right-radius: 25px;
+            border-bottom-left-radius: 25px;
+            width: 300px;
+            height: 250px;
+        }
+        .container5{
+            margin: 40px;
+            width: 100%;
+            height: 450px;
+            background: url(Download\ Chef\ preparing\ food\ in\ the\ kitchen\ at\ the\ restaurant_\ Professional\ chef\ cooking\,\ Gourmet\ chef\ cooking\ in\ a\ commercial\ kitchen\,\ AI\ Generated\ for\ free.png);
+            background-size: cover;
+            background-position: center;
+        }
+        .container5 h1{
+            font-size: 40px;
+            color: white;
+            font-weight: 500;
+            font-family: 'Itim', sans-serif;
+            text-align: center;
+            padding: 180px;
+        }
+        .view{
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+        }
+        .view-btn{
+            background-color: #F5852a;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-weight: 500;
+            padding: 20px 30px;
+            font-size: 25px;
+            margin-bottom: 30px;
+        }
+        .container6{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 70px;
+            flex-wrap: wrap;
+            margin-bottom: 50px;
+        }
+        .cards3{
+            background-color: linen;
+            padding: 10px;
+            width: 400px;
+            height: 460px;
+            border: none;
+            text-align: center;
+            padding: 10px;
+            position: relative;
+        }
+        .cards3 img{
+            border-radius: 12px;
+            width: 370px;
+            height: 250px;
+            object-fit: cover;
+            border: 2px solid black;
+        }
+        .heart{
+            position: absolute;
+            top: 20px;
+            right: 50px;
+            font-size: 30px;
+            color: rgba(0,0,0,0.6);
+            cursor: pointer;
+            transition: color 0.3s ease;
+            z-index: 10;
+        }
+        .heart.active{
+            color: red;
+        }
+        h3{
+            font-size: 23px;
+            font-weight: 400;
+            font-family: 'Itim', sans-serif;
+            margin: 4px;
+        }
+        .indianred{color: red;font-size: 23px;}
+        .rows1{
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+        }
+        .rows2{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+        .rows2 img{
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .rows3{
+            display: flex;
+            gap: 30px;
+            justify-content: space-evenly;
+            align-items: center;
+            border-top: 2px solid black;
+            margin: 15px;
+        }
+        .stars{
+            color: gold;
+            font-size: 20px;
+        }
+        .arrow{
+            font-size: 30px;
+            color: indianred;
+        }
+        .container7{
+            margin-bottom: 140px;
+            width: 100%;
+            height: 600px;
+            background: url(Three\ Hour\ Asian\ Cookery\ Class\ And\ Signed\ Cookbook\ By\ School\ of\ Wok.png);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            overflow: visible;
+            z-index: 2;
+        }
+        .container7::before{
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
+            z-index: 1;
+        }
+        .same{
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            gap: 30px;
+        }
+        .allcourse-btn{
+            background-color: #F5852a;
+            padding: 20px 35px;
+            color: white;
+            border-radius: 12px;
+            font-size: 25px;
+            font-weight: 400;
+            border: none;
+        }
+        .same h1{
+            font-size: 50px;
+            color: deepskyblue;
+            font-weight: 500;
+            font-family: 'Itim', sans-serif;
+            text-align: center;
+            padding: 180px;
+        }
+        .same .red{
+            font-size: 55px;
+        }
+        .container7 .box1{
+            padding: 20px;
+            border-bottom-left-radius: 30px;
+            border-top-right-radius: 30px;
+            position: absolute;
+            bottom: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            background-color: papayawhip;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 50px;
+            font-family: 'Itim', sans-serif;
+            z-index: 5;
+        }
+        .box img{
+            width: 150px;
+            height: 150px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .scroll-wrapper{
+            position: relative;
+            padding: 50px 0;
+        }
+        .scroll-hint{
+            position: absolute;
+            left: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #555;
+            color: black;
+            padding: 25px 35px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        .card-container{
+            display: flex;
+            gap: 40px;
+            padding: 20px 80px;
+            overflow-x: auto;
+            scroll-behavior: smooth;
+            user-select: none;
+            cursor: grab;
+        }
+        .card-container::-webkit-scrollbar{
+            display: none;
+        }
+        .cards4{
+            min-width: 420px;  
+            background: #fde6d3;
+            border-radius: 20px;
+            padding: 25px;
+            flex-shrink: 0;
+        }          
+        .cards4 img{
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+        .cards4 h3{
+            font-family: 'Itim', sans-serif;
+            margin: 15px 0 5px;
+            font-size: 30px;
+            font-weight: 400;
+        }
+        .cards4 p{
+            font-size: 25px;
+            color: black;
+            font-family: 'Itim', sans-serif;
+            font-weight: 400;
+        }
+        .container8{
+            margin-bottom: 140px;
+            width: 100%;
+            height: 600px;
+            background: url(Michelin\ Star\ Mastery.png);
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        .boxess{
+            text-align: center;
+            padding: 20px;
+            border-bottom-left-radius: 30px;
+            border-top-right-radius: 30px;
+            position: absolute;
+            bottom: -120px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80%;
+            background-color: papayawhip;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 50px;
+            font-family: 'Itim', sans-serif;
+            margin-bottom: 40px;
+        }
+        .boxess img{
+            width: 150px;
+            height: 150px;
+            padding: 15px;
+            border-radius: 10px;
+        }
+        .boxess h2, .boxess h3{
+            color: black;
+        }
+        .container9{
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            border-radius: 20px;
+            border: none;
+            justify-content: center;
+            width: 1000px;
+            padding: 30px;
+            margin: auto;
+        }
+        .container9 h2{
+            color: black;
+            font-size: 28px;
+            font-family: 'Itim', sans-serif;
+            font-weight: 500;
+        }
+        .avatar-group {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+        .avatar-group img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #fff;     
+            margin-left: -25px;       
+            background: #fff;
+        }
+        .avatar-group img:first-child {
+            margin-left: 0;
+        }
+        .footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            justify-content: center;
+            background-color: #F5852C;
+            font-family: 'Itim', cursive;
+            color: white;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            margin: 20px;
+        }
+        .footer ul{
+            display: flex;
+            gap: 180px;
+        }
+        .footer ul li{
+            list-style-type: none;
+        }
+        .footer h3{
+            font-size: 26px;
+            font-weight: 400;
+        }
+        .footer h4{
+            font-size: 22px;
+            font-weight: 400;
+        }
+        .copyrights{
+            display: flex;
+            gap: 30px;
+            font-size: 20px;
+        }
+        @media (max-width:992px) {
+            body{
+                padding: 20px;
+            }
+            .hero{
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .logo img{
+                width: 150px;
+                height: 150px;
+            }
+            nav a{
+                font-size: 20px;
+            }
+            .icons{
+                flex-wrap: wrap;
+                gap: 40px;
+                justify-content: center;
+            }
+            .sign-btn{
+                padding: 16px 26px;
+                font-size: 18px;
+            }
+            .footer{
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 20px;
+            }
+            .footer ul{
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 120px;
+            }
+            .footer h3{
+                font-size: 23px;
+            }
+            .footer h4{
+                font-size: 20px;
+            }
+        }
+        @media (max-width:600px) {
+            body{
+                padding: 10px;
+            }
+            .hero{
+                flex-direction: column;
+                gap: 15px;
+                align-items: center;
+            }
+            .logo img{
+                width: 180px;
+                height: 180px;
+            }
+            .menu-toggle{
+                display: block;
+                background: black;
+                padding: 10px 14px;
+                border-radius: 8px;
+                order: 2;
+            }
+            .navbar{
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                gap: 15px;
+                padding: 20px 0;
+                background-color:  #F5852C;
+                order: 3;
+                text-align: center;
+            } 
+            .navbar.active{
+                display: flex;
+            }  
+            nav a{
+                font-size: 18px;
+            }
+            .icons{
+                flex-direction: column;
+                gap: 20px;
+                align-items: center;
+            }
+            .sign-btn{
+                padding: 14px 24px;
+                font-size: 16px;
+            }
+            .footer{
+                flex-direction: column;
+                justify-content: center;
+                gap: 15px;
+            }
+            .footer ul{
+                flex-direction: column;
+                justify-content: center;
+                gap: 40px;
+            }
+            .footer h3{
+                font-size: 20px;
+            }
+            .footer h4{
+                font-size: 18px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="logo">
+            <img src="logo.png" alt="Chef Logo">
+        </div>
+        <div class="menu-toggle">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+        <nav class="navbar">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="blogs.html">Blogs</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+        <div class="icons">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <i class="fa-solid fa-user"></i>
+        </div>
+        <div class="button">
+            <a href="signin.html"><button class="sign-btn">Sign In</button></a>
+        </div>
+    </div>
+    <div class="container1">
+        <div class="row1">
+            <h1>The Best Food<br>For The Best<br>Moments</h1>
+            <div class="search">
+                <input type="text" placeholder="Search For">
+                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+            </div>
+        </div>
+        <p>Join interactive online cooking classes and learn delicious recipes from expert chefs in the comfort of your kitchen.</p>
+        <div class="row2">
+            <p>Start Your Free Trial Today</p>
+            <button class="browse-btn">Browse Classes</button>
+        </div>
+    </div>
+    <div class="container2">
+        <div class="cards1">
+            <img src="profile.png" alt="Profile Image">
+            <h2>Registered User</h2>
+        </div>
+        <div class="cards1">
+            <img src="Mushroom Pasta Clipart Bundle_ Watercolor Food Art (Digital Download).png" alt="Food Image">
+            <h2>Food Recipes</h2>
+        </div>
+        <div class="cards1">
+            <img src="🍲👩_🍳 Culinary Adventures Begin_ Master the Art with Cooking Classes in-1.png" alt="Chef Image">
+            <h2>Year of Experience</h2>
+        </div>
+        <div class="cards1">
+            <a href="chef.html"><img src="Bocuse d'Or Finale 2023.png" alt="Chef Image"></a>
+            <h2>Professional Chef</h2>
+        </div>
+    </div>
+    <div class="container3">
+        <h2>At <span class="red">My Cooking My Style,</span> we believe cooking should be fun, easy, and accessible to everyone.<br>
+        Whether you're a beginner or a seasoned foodie, our online classes are designed to help you<br>
+        master techniques, explore world cuisines, and create dishes you'll be proud of.</h2>
+    </div>
+    <div class="container4">
+        <div class="cards2">
+            <img src="food vlogger making cooking vlog fan followers success png.png" alt="Image">
+        </div>
+        <div class="cards2">
+            <img src="Female and male chefs in iniforms us featuring female, adult, and people.png" alt="Image">
+        </div>
+        <div class="cards2">
+            <img src="Best Chicken Biryani Recipe_ Spice Up Your Meal.png" alt="Image">
+        </div>
+        <div class="cards2">
+            <img src="Joyful Baking Session.png" alt="Image">
+        </div>
+    </div>
+    <div class="container5">
+        <h1>You Will Find Happiness And Food Here.</h1>
+    </div>
+    <div class="view"><button class="view-btn">View All Classes</button></div>
+    <div class="container6">
+        <div class="cards3">
+            <img src="Penne all’Arrabbiata — One Pot Pia.png" alt="Image">
+            <i class="fa-solid fa-heart heart"></i>
+            <div class="rows1">
+                <h3 class="indianred">Italian Pasta Perfection</h3>
+                <h3>$ 200</h3>
+            </div>
+            <h3>Fresh handmade pasta & sauces</h3>
+            <div class="rows2">
+                <img src="Arte na Panificação! Renove suas fotos! Entre em….png" alt="Image">
+                <h3>Chef Alon</h3>
+                <img src="A lamp wearing a toga hat symbolizes intelligence  vector illustration of eps 10 _ Premium Vector.png" alt="Image">
+                <h3>Online Class</h3>
+            </div>
+            <div class="rows3">
+                <h3>4.5</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <i class="fa-solid fa-circle-arrow-right arrow"></i>
+            </div>
+        </div>
+        <div class="cards3">
+            <img src="Japanese Cake Roll.png" alt="Image">
+            <i class="fa-solid fa-heart heart"></i>
+            <div class="rows1">
+                <h3 class="indianred">Sushi Rolling Mastery</h3>
+                <h3>$ 200</h3>
+            </div>
+            <h3>Learn authentic Japanese techniques</h3>
+            <div class="rows2">
+                <img src="Arte na Panificação! Renove suas fotos! Entre em….png" alt="Image">
+                <h3>Chef Alon</h3>
+                <img src="A lamp wearing a toga hat symbolizes intelligence  vector illustration of eps 10 _ Premium Vector.png" alt="Image">
+                <h3>Online Class</h3>
+            </div>
+            <div class="rows3">
+                <h3>4.5</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <i class="fa-solid fa-circle-arrow-right arrow"></i>
+            </div>
+        </div>
+        <div class="cards3">
+            <img src="Authentic Tres Leches Cake Recipe (Three Milk Cake).png" alt="Image">
+            <i class="fa-solid fa-heart heart"></i>
+            <div class="rows1">
+                <h3 class="indianred">Baking Basics</h3>
+                <h3>$ 200</h3>
+            </div>
+            <h3>Cakes, Pastries & desserts from scratch</h3>
+            <div class="rows2">
+                <img src="Arte na Panificação! Renove suas fotos! Entre em….png" alt="Image">
+                <h3>Chef Alon</h3>
+                <img src="A lamp wearing a toga hat symbolizes intelligence  vector illustration of eps 10 _ Premium Vector.png" alt="Image">
+                <h3>Online Class</h3>
+            </div>
+            <div class="rows3">
+                <h3>4.5</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <i class="fa-solid fa-circle-arrow-right arrow"></i>
+            </div>
+        </div>
+        <div class="cards3">
+            <img src="Bibimbap (Korean Rice Bowl).png" alt="Image">
+            <i class="fa-solid fa-heart heart"></i>
+            <div class="rows1">
+                <h3 class="indianred">Healthy Meals Made Easy</h3>
+                <h3>$ 200</h3>
+            </div>
+            <h3>Quick, balanced, and delicious recipes</h3>
+            <div class="rows2">
+                <img src="Arte na Panificação! Renove suas fotos! Entre em….png" alt="Image">
+                <h3>Chef Alon</h3>
+                <img src="A lamp wearing a toga hat symbolizes intelligence  vector illustration of eps 10 _ Premium Vector.png" alt="Image">
+                <h3>Online Class</h3>
+            </div>
+            <div class="rows3">
+                <h3>4.5</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <i class="fa-solid fa-circle-arrow-right arrow"></i>
+            </div>
+        </div>
+        <div class="cards3">
+            <img src="Chicken Vindaloo Recipe.png" alt="Image">
+            <i class="fa-solid fa-heart heart"></i>
+            <div class="rows1">
+                <h3 class="indianred">Indian Spices & Curries</h3>
+                <h3>$ 200</h3>
+            </div>
+            <h3>Unlock the secrets of aromatic flavors</h3>
+            <div class="rows2">
+                <img src="Arte na Panificação! Renove suas fotos! Entre em….png" alt="Image">
+                <h3>Chef Alon</h3>
+                <img src="A lamp wearing a toga hat symbolizes intelligence  vector illustration of eps 10 _ Premium Vector.png" alt="Image">
+                <h3>Online Class</h3>
+            </div>
+            <div class="rows3">
+                <h3>4.5</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <i class="fa-solid fa-circle-arrow-right arrow"></i>
+            </div>
+        </div>
+        <div class="cards3">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-AXDdy2Dqni3G6o--rl0r2aeLMNtRNtBMk5knglCfDF3QgoL8" alt="Image">
+            <i class="fa-solid fa-heart heart"></i>
+            <div class="rows1">
+                <h3 class="indianred">Mediterranean Delights</h3>
+                <h3>$ 200</h3>
+            </div>
+            <h3>Fresh, vibrant dishes packed <br>with nutrition</h3>
+            <div class="rows2">
+                <img src="Arte na Panificação! Renove suas fotos! Entre em….png" alt="Image">
+                <h3>Chef Alon</h3>
+                <img src="A lamp wearing a toga hat symbolizes intelligence  vector illustration of eps 10 _ Premium Vector.png" alt="Image">
+                <h3>Online Class</h3>
+            </div>
+            <div class="rows3">
+                <h3>4.5</h3>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+                <i class="fa-solid fa-circle-arrow-right arrow"></i>
+            </div>
+        </div>
+    </div>
+    <div class="container7">
+        <div class="same">
+            <h1>Get Your Classes <span class="red">Right Now</span></h1>
+            <button class="allcourse-btn">All Courses</button>
+        </div>
+        <div class="box1">
+            <div class="box">
+                <img src="Download idea lightbulb puzzle for free.png" alt="Image">
+                <h3>Find Your Courses</h3>
+            </div>
+            <div class="box">
+                <img src="Online Books, Digital Library by robuart on @creativemarket.png" alt="Image">
+                <h3>Learn Online</h3>
+            </div>
+            <div class="box">
+                <img src="Design De Estilo Cartoon De Fatia De Pizza PNG , Padaria, Fresco, Pizza Plana PNG Imagem para download gratuito.png" alt="Image">
+                <h3>Make Your Food</h3>
+            </div>
+        </div>
+    </div>
+    <div class="scroll-wrapper">
+    <div class="scroll-hint">Scroll Now ❮</div>
+
+    <div class="card-container">
+        <div class="cards4">
+            <img src="L'Ambiance en salle et en cuisine _ Votre ingrédient secret pour la satisfaction client - Mon équipe CHR.png" alt="Image">
+            <h3>Choose Your Class</h3>
+            <p>Select from a wide range of cuisines and skills.</p>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+        </div>
+        <div class="cards4">
+            <img src="How To Be a Better Cook, 21 Tips _ Leiths Online Cookery School.png" alt="Image">
+            <h3>Join Live or Watch Anytime</h3>
+            <p>Learn in real-time or access recordings later.</p>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+        </div>
+        <div class="cards4">
+            <img src="Baking Fresh Bread (1).png" alt="Image">
+            <h3>Cook Along & Practice</h3>
+            <p>Follow step-by-step guidance.</p>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+        </div>
+        <div class="cards4">
+            <img src="Joyful Baking Session.png" alt="Image">
+            <h3>Share & Enjoy</h3>
+            <p>Impress family and friends with your creations.</p>
+            <div class="stars">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star-half-stroke"></i>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container8">
+    <div class="boxess">
+        <div class="box5">
+            <img src="3dd5d833-50c5-4eb8-a26d-b7132e53abb2.png" alt="Image">
+            <h2>Starter Pack</h2>
+            <h3>Free trial, 2 classes included</h3>
+        </div>
+        <div class="box5">
+            <img src="salmon-plated-dish.png" alt="Image">
+            <h2>Monthly Plan</h2>
+            <h3>Unlimited classes, $29/month</h3>
+        </div>
+        <div class="box5">
+            <img src="They Don’t Want You to Know 👀 25 Online Goldmines That Made People Rich Link in Bio.png" alt="Image">
+            <h2>Annual Plan</h2>
+            <h3>Save 20%, $279/year</h3>
+        </div>
+    </div>
+</div>
+<div class="container9">
+    <h2>"The classes are easy to follow, and I've learned so many recipes I never thought.I<br>
+    could cook at home!" - Sarah L.</h2>
+    <h2>"I love how interactive it is. The chef answered my questions live, and I nailed my 
+    first sushi roll!" - Arjun K.</h2>
+    <div class="avatar-group">
+        <img src="https://www.shutterstock.com/image-photo/serious-young-ambitious-indian-businessman-260nw-2598795817.jpg" alt="User 1">
+        <img src="https://media.istockphoto.com/id/496206710/photo/high-school-senior-girl-portrait-in-the-garden.jpg?s=612x612&w=0&k=20&c=9Fb7whbHfrYOCbrMwQhkBdywqv3vTeNREYNMnYiwk4A=" alt="User 2">
+        <img src="https://img.freepik.com/free-photo/designer-working-3d-model_23-2149371896.jpg?semt=ais_hybrid&w=740&q=80" alt="User 3">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHLuI1-O_Vtl6tlxMIl63WxiieK_PgVWzdig&s" alt="User 4">
+    </div>
+</div>
+<div class="footer">
+        <ul>
+            <li>
+                <div class="logo">
+                    <img src="logo.png" alt="Image">
+                </div>
+            </li>
+            <li>
+                <h3>Quick Links</h3>
+                <h4>Home</h4>
+                <h4>About Us</h4>
+                <h4>Explore Classes</h4>
+                <h4>Pricing</h4>
+                <h4>Testimonials</h4>
+                <h4>Contact</h4>
+            </li>
+            <li>
+                <h3>Support</h3>
+                <h4>FAQ's</h4>
+                <h4>Help Center</h4>
+                <h4>Terms & Conditions</h4>
+                <h4>Privacy Policy</h4>
+            </li>
+            <li>
+                <h3>Get in Touch</h3>
+                <h4>Chennai, Guindy</h4>
+                <h4>91+3894827403</h4>
+                <h4>Nazer003@gmail.com</h4>
+            </li>
+        </ul>
+        <div class="copyrights">
+            <p>Terms & Policy</p>
+            <p>Privacy & Policy</p>
+        </div>
+    </div>
+    <script>
+        const menuToggle=document.querySelector(".menu-toggle");
+        const navbar=document.querySelector(".navbar");
+        menuToggle.addEventListener("click", ()=>{
+            navbar.classList.toggle("active");
+        });
+        const hearts=document.querySelectorAll(".heart");
+        hearts.forEach(heart =>{
+            heart.addEventListener("click", ()=>{
+                heart.classList.toggle("active");
+            });
+        });
+        const s=document.querySelector('.card-container');
+        let isDown=false, startX, scrollLeft;
+        s.addEventListener('mousedown', e=>{
+            isDown=true;
+            startX=e.pageX;
+            scrollLeft=s.scrollLeft;
+        });
+        s.addEventListener('mouseup', () => isDown=false);
+        s.addEventListener('mouseleave', () => isDown=false);
+        s.addEventListener('mousemove', e =>{
+            if(!isDown) return;
+            e.preventDefault();
+            s.scrollLeft=scrollLeft-(e.pageX - startX);
+        });
+    </script>
+</body>
+</html>
